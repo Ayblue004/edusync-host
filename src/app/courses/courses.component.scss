@@ -1,0 +1,80 @@
+.container{
+    height: 83vh;
+    .top{
+        padding: var(--desktop-padding);
+        h1{
+            font-weight: 400;
+            font-size: 1rem;
+
+            b{
+
+            }
+        }
+    }
+    .grid{
+        padding: var(--desktop-padding);
+        .challenge{
+            background-color: var(--primary-color);
+            border-radius: 32px;
+            width: 392px;
+            height: 257px;
+            padding: 25px;
+            .title{
+                font-size: 32px;
+                font-weight: 600;
+                color: var(--default-color);
+                margin-bottom: 7px;
+            }
+            .line{
+                width: 100%;
+                background-color: rgba($color: #000000, $alpha: 0.1);
+                height: 8px;
+                border-radius: 10px;
+                margin-bottom: 5px;
+                .progress{
+                    width: 65%;
+                    height: 8px;
+                    border-radius: 10px;
+                    background-color: var(--active-color);
+                }
+            }
+            .questions{
+                color: var(--default-color);
+                font-size: 12px;
+                opacity: 0.6;
+            }
+            .button{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 30px;
+                padding: var(--page-padding);
+                background-color: var(--button-color);
+                margin-top: 25%;
+                .button-text{
+
+                }
+            }
+            .img-background{
+                background-color: black;
+                padding: 10px;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                img{
+                }
+            }
+        }
+    }
+} 
+
+@media (min-width: 700px){
+    .container{
+        width: 80vw;
+        min-width: 100%;
+    }
+    .explain{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

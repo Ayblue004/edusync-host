@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="desktop-image">
+        <img src="../../assets/img/vector/Style Guide/Shiny Happy Morning Jog.png " alt="">
+    </div>
+    <div *ngIf="step == 1" class="step step1">
+        <div class="back">
+            <img src="../../assets/icons/svg/arrow-left.svg" alt="back">
+        </div>
+        <h1 class="main-head">Create an Account</h1>
+        <p class="desc">Please provide a valid email address for a <br> quick and easy verification</p>
+        <div class="inputs">
+            <input type="email" name="email" id="email" placeholder="Enter school/normal email address">
+            <input type="password" name="password" id="password" placeholder="Enter password">
+            <button (click)="changeStep(2)">Continue</button>
+        </div>
+        <p class="or-divide">or</p>
+        <div class="services">
+            <div class="service">
+                <img src="../../assets/icons/png/google.png" alt="google">
+                <p class="service-name">Continue with Google</p>
+            </div> 
+        </div>
+        <p class="bottom-text">Already have an account? <span class="link" (click)="routeLoginPage()">Log in</span></p>
+    </div>
+
+    <div *ngIf="step == 2" class="step step2">
+        <div class="back">
+            <img src="../../assets/icons/svg/arrow-left.svg" alt="back">
+        </div>
+        <h1 class="main-head">Now, lets  know  more about you</h1>
+        <p class="desc">We’d love to personalize your experience. Please provide your matric number and department so we can tailor our services to your need.</p>
+        <div class="inputs">
+            <input type="text" name="fname" id="fname" placeholder="Enter your First Name">
+            <input type="text" name="lname" id="lname" placeholder="Enter your Last Name">
+            <input type="text" name="matricNo" id="matricNo" placeholder="Enter your Matric no.">
+            <button (click)="changeStep(3)">Create your account</button>
+        </div>
+        <p class="bottom-text">Already have an account? <span class="link">Log in</span></p>
+    </div>
+
+    <div *ngIf="step == 3" class="step step3">
+        <div class="back">
+            <img src="../../assets/icons/svg/arrow-left.svg" alt="back">
+        </div>
+        <h1 class="main-head">Verify email address</h1>
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illum natus debitis expedita consequuntur quos modi quo necessitatibus.</p>
+        <div class="inputs">
+            <label for="otp">Enter OTP</label>
+            <input type="text" name="otp" id="otp" placeholder="OTP">
+            <p class="resend_otp">Did get OTP? <b>Resend OTP</b></p>
+            <button (click)="changeStep(4)">Finish Set Up</button>
+        </div>
+        <p class="bottom-text">By creating an account, you aggree to Nutec <span class="link">Conditions of Use</span> and <span>Privacy notice</span></p>
+    </div>
+
+    <div *ngIf="step == 4" class="step step4">
+        <div class="back">
+            <img src="../../assets/icons/svg/arrow-left.svg" alt="back">
+        </div>
+        <h1 class="main-head">Congratulations</h1>
+        <p class="class">You have successfully completed your registration</p>
+        <div class="congrats">
+            <img src="../../assets/icons/svg/congrats.gif" alt="">
+        </div>
+       <div class="inputs">
+        <button (click)="routeDashboard()">Go to Dashboard</button>
+       </div>
+    </div>
+    
+
+</div>

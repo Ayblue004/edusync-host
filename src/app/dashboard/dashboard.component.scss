@@ -1,0 +1,154 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    .top{
+        padding: var(--page--padding);
+        border-bottom: 1px solid var(--border-color);
+        @include flex-between();
+        .streak{
+            @include flex-center();
+            span{
+                font-size: 1.5rem;
+            }
+            img{
+                width: 30px;
+            }
+        }
+        h1{
+            display: none;
+        }
+        .profile{ 
+            span{
+                display: none;
+            }
+            .profile-img{
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .main{
+        display: flex;
+        .sidebar{
+            display: none;
+            .navs{
+                .nav-link{
+                    padding: 10px;
+                    img{
+    
+                    } 
+                    span{
+    
+                    }  
+                }
+                .active{
+                    background-color: var(--border-color);
+                    border-radius: 10px;
+                }
+            }
+        }
+        .middle{
+        }
+        .leaderboard{
+
+        }
+    }
+    .mobile-nav{
+        border-radius: 20px;
+        border-top: 1px solid grey;
+        position: absolute;
+        bottom: 0;
+        padding: var(--page--padding);
+        @include flex-between();
+        width: 100vw;
+        .nav-link-mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 30px;
+            }
+            span{
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container{ 
+        height: 100vh;
+        overflow-y: hidden;
+        .top{
+            @include flex-between();
+            align-items: center;
+            padding: var(--desktop-padding);
+            height: 10vh;
+            .streak{
+                display: none;
+            }
+            h1{
+                display: block;
+                font-size: 1.5rem;
+            }
+            .profile{
+                @include flex-center(); 
+                span{
+                    display: block;
+                    color: var(--alt-color);
+                    margin-right: 5px;
+                }
+            }
+        }
+        .main{
+            .sidebar{
+                width: 20vw;
+                max-width: 300px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: var(--desktop-padding);
+                border-right: 1px solid var(--border-color);
+                height: 90vh;
+                .navs{
+                    padding-top: 20px;
+                    .nav-link{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        img{
+                            margin-right: 5px;
+                            width: 20px;
+                        }
+                    }
+                }
+                .logout{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    position: relative;
+                    bottom: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .mobile-nav{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.container{
+    height: 83vh;
+    .top{
+        padding: 20px;
+        h1{
+            font-weight: 400;
+            font-size: 1rem;
+
+            b{
+
+            }
+        }
+    }
+    .nav-btns{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 20px;
+        .button{
+            padding: 10px 15px;
+            border-radius: 12px;
+            background-color: var(--border-color);
+            width: 45%;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .text{
+                font-weight: 600;
+                font-size: 12px;
+            }
+            .number{
+                background-color: var(--border-color);
+                border-radius: 50%;
+                padding: 5px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .active{
+            background-color: var(--active-color);
+        }
+    }
+    .line{
+        display: flex;
+        padding: 0 5px;
+        margin-bottom: 20px;
+        #hr1{
+            width: 50%;
+            height: 2px;
+            background-color: var(--border-color);
+            height: 20x;
+        }
+        #hr2{
+            height: 2px;
+            background-color: black;
+            width: 50%;
+        }
+    }
+
+    .development{
+        padding: 20px;
+        width: 100%;
+        .img-contain{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            img{
+                width: 350px;
+            }
+        }
+        .explain{
+            text-align: center;
+            b{
+                font-size: 1.5rem;
+            }
+        }
+        p{
+            margin: 20px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 700px){
+    .container{
+        width: 80vw;
+        min-width: 100%;
+    }
+    .explain{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
